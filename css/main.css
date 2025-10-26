@@ -227,7 +227,7 @@ p {
     position: relative;
     background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-blue) 100%);
     color: var(--white);
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-lg) 0;
     overflow: hidden;
 }
 
@@ -273,7 +273,7 @@ p {
 
 /* Section Styles */
 .section {
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-sm) 0;
 }
 
 .section-alt {
