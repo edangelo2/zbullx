@@ -118,12 +118,12 @@ p {
 }
 
 .logo-img {
-    height: 100px;
+    height: 75px;
     width: auto;
     display: block;
     object-fit: contain;
-    margin-top: -20px;
-    margin-bottom: -20px;
+    margin-top: -10px;
+    margin-bottom: -10px;
 }
 
 .logo-image {
