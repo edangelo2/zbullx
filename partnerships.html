@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ZBull-X Technologies Partnerships - Strategic technology partnerships with Calypso, Murex, Lumina Americas, and leading cloud providers.">
+    <meta name="keywords" content="Calypso partner, Murex partner, Lumina Americas, technology partnerships, cloud deployment">
+    
+    <title>Partnerships - ZBull-X Technologies</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    
+    <style>
+        /* Partnerships Page Specific Styles */
+        .page-hero {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-blue) 100%);
+            color: var(--white);
+            padding: var(--spacing-lg) 0;
+            text-align: center;
+        }
+        
+        .page-hero h1 {
+            color: var(--white);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .page-hero p {
+            font-size: 1.25rem;
+            color: var(--neutral-light);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .partnership-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto var(--spacing-lg);
+        }
+        
+        .partnership-intro p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+        }
+        
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-lg);
+        }
+        
+        .partner-card {
+            background-color: var(--white);
+            border-radius: 0.5rem;
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-base);
+            border-top: 4px solid var(--primary-blue);
+        }
+        
+        .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .partner-logo {
+            height: 80px;
+            background-color: var(--neutral-light);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--spacing-md);
+            padding: var(--spacing-sm);
+        }
+        
+        .partner-logo-text {
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+        }
+        
+        .partner-name {
+            font-size: 1.5rem;
+            color: var(--primary-navy);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .partner-description {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .partner-benefits {
+            margin-top: var(--spacing-md);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid var(--neutral-light);
+        }
+        
+        .partner-benefits h4 {
+            font-size: 1rem;
+            color: var(--primary-navy);
+            margin-bottom: var(--spacing-sm);
+            font-weight: 600;
+        }
+        
+        .partner-benefits ul {
+            list-style: none;
+        }
+        
+        .partner-benefits li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+            color: var(--text-gray);
+        }
+        
+        .partner-benefits li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-weight: bold;
+        }
+        
+        .alliance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-md);
+        }
+        
+        .alliance-card {
+            background-color: var(--white);
+            border-radius: 0.5rem;
+            padding: var(--spacing-md);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-base);
+            text-align: center;
+        }
+        
+        .alliance-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .alliance-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto var(--spacing-sm);
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-blue) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .alliance-icon svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--white);
+        }
+        
+        .alliance-name {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .alliance-description {
+            color: var(--text-gray);
+            font-size: 0.9375rem;
+        }
+        
+        @media (max-width: 767px) {
+            .partners-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .alliance-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header" id="header">
+        <div class="header-content">
+            <a href="index.html" class="logo" aria-label="ZBull-X Technologies Home">
+                <span>ZBull-X Technologies</span>
+            </a>
+            
+            <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="partnerships.html" class="active">Partnerships</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="container">
+                <h1>Strategic Partnerships</h1>
+                <p>
+                    Collaborating with leading technology vendors to deliver exceptional client outcomes
+                </p>
+            </div>
+        </section>
+
+        <!-- Technology Partnerships Section -->
+        <section class="section">
+            <div class="container">
+                <div class="partnership-intro">
+                    <h2>Strategic Technology Partnerships</h2>
+                    <p>
+                        ZBull-X Technologies leverages deep relationships with leading vendors to ensure optimal platform delivery. 
+                        Our partnerships enable us to provide clients with privileged access to technical resources, 
+                        early product insights, and collaborative problem-solving capabilities.
+                    </p>
+                </div>
+                
+                <div class="partners-grid">
+                    <!-- Partner 1: Calypso -->
+                    <article class="partner-card">
+                        <div class="partner-logo">
+                            <span class="partner-logo-text">CALYPSO</span>
+                        </div>
+                        <h3 class="partner-name">Calypso Technology</h3>
+                        <p class="partner-description">
+                            As a trusted Calypso implementation partner, ZBull-X Technologies brings extensive experience 
+                            across the full Calypso platform. Our consultants have delivered numerous front-to-back 
+                            implementations for treasury and derivatives operations, leveraging proprietary accelerators 
+                            to reduce time-to-value.
+                        </p>
+                        <div class="partner-benefits">
+                            <h4>Partnership Benefits:</h4>
+                            <ul>
+                                <li>Direct access to Calypso technical support</li>
+                                <li>Early access to platform updates and roadmaps</li>
+                                <li>Certified consultants with deep product knowledge</li>
+                                <li>Pre-configured templates and accelerators</li>
+                                <li>Proven rapid-deployment methodologies</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <!-- Partner 2: Murex -->
+                    <article class="partner-card">
+                        <div class="partner-logo">
+                            <span class="partner-logo-text">MUREX</span>
+                        </div>
+                        <h3 class="partner-name">Murex</h3>
+                        <p class="partner-description">
+                            Our partnership with Murex enables ZBull-X Technologies to deliver world-class MX.3 implementations 
+                            with specialized focus on complex regulatory modules including FRTB, collateral management, 
+                            and XVA calculations. Our consultants bring 10+ years of dedicated Murex experience.
+                        </p>
+                        <div class="partner-benefits">
+                            <h4>Partnership Benefits:</h4>
+                            <ul>
+                                <li>Specialized expertise in regulatory implementations</li>
+                                <li>Direct collaboration with Murex product teams</li>
+                                <li>Advanced training in latest MX.3 capabilities</li>
+                                <li>Performance optimization best practices</li>
+                                <li>Joint client success initiatives</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <!-- Partner 3: Lumina Americas -->
+                    <article class="partner-card">
+                        <div class="partner-logo">
+                            <span class="partner-logo-text">LUMINA</span>
+                        </div>
+                        <h3 class="partner-name">Lumina Americas</h3>
+                        <p class="partner-description">
+                            ZBull-X Technologies' partnership with Lumina Americas reflects our commitment to serving 
+                            Latin American capital markets. We combine platform expertise with deep understanding 
+                            of regional regulatory requirements and market practices to deliver localized solutions.
+                        </p>
+                        <div class="partner-benefits">
+                            <h4>Partnership Benefits:</h4>
+                            <ul>
+                                <li>Regional market integration expertise</li>
+                                <li>Local regulatory compliance knowledge</li>
+                                <li>Spanish/Portuguese language support</li>
+                                <li>Cross-border transaction processing</li>
+                                <li>Multi-country deployment experience</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategic Alliances Section -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Strategic Alliances</h2>
+                    <p class="section-subtitle">
+                        Complementary partnerships that enhance our comprehensive service delivery
+                    </p>
+                </div>
+                
+                <div class="alliance-grid">
+                    <!-- Alliance 1: Cloud Providers -->
+                    <article class="alliance-card">
+                        <div class="alliance-icon">
+                            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M52 36C52 32 49 28 44 28C44 20 38 14 30 14C22 14 16 20 16 28C11 28 8 32 8 36C8 40 11 44 16 44H52C56 44 60 40 60 36C60 32 56 28 52 28V36Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h4 class="alliance-name">Cloud Infrastructure Partners</h4>
+                        <p class="alliance-description">
+                            Collaborations with AWS, Azure, and Google Cloud for scalable, secure cloud deployments of capital markets platforms.
+                        </p>
+                    </article>
+                    
+                    <!-- Alliance 2: Data Providers -->
+                    <article class="alliance-card">
+                        <div class="alliance-icon">
+                            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="12" y="12" width="40" height="40" rx="2" stroke="currentColor" stroke-width="3"/>
+                                <path d="M12 24H52M28 12V52" stroke="currentColor" stroke-width="3"/>
+                                <circle cx="20" cy="36" r="2" fill="currentColor"/>
+                                <circle cx="36" cy="36" r="2" fill="currentColor"/>
+                                <circle cx="44" cy="36" r="2" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h4 class="alliance-name">Market Data Vendors</h4>
+                        <p class="alliance-description">
+                            Integration partnerships with leading market data providers for real-time pricing, reference data, and market feeds.
+                        </p>
+                    </article>
+                    
+                    <!-- Alliance 3: Testing & QA -->
+                    <article class="alliance-card">
+                        <div class="alliance-icon">
+                            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="3"/>
+                                <path d="M24 32L28 36L40 24" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h4 class="alliance-name">Testing & Quality Assurance</h4>
+                        <p class="alliance-description">
+                            Partnerships with specialized testing firms for comprehensive UAT, performance testing, and quality assurance services.
+                        </p>
+                    </article>
+                    
+                    <!-- Alliance 4: Cybersecurity -->
+                    <article class="alliance-card">
+                        <div class="alliance-icon">
+                            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M32 8L8 20V36C8 48.15 17.84 58.92 32 64C46.16 58.92 56 48.15 56 36V20L32 8Z" stroke="currentColor" stroke-width="3"/>
+                                <circle cx="32" cy="34" r="6" stroke="currentColor" stroke-width="2"/>
+                                <path d="M32 40V46" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h4 class="alliance-name">Cybersecurity Solutions</h4>
+                        <p class="alliance-description">
+                            Alliances with cybersecurity specialists to ensure robust security frameworks and compliance with industry standards.
+                        </p>
+                    </article>
+                    
+                    <!-- Alliance 5: Infrastructure -->
+                    <article class="alliance-card">
+                        <div class="alliance-icon">
+                            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="16" y="12" width="32" height="40" rx="2" stroke="currentColor" stroke-width="3"/>
+                                <path d="M24 20H40M24 28H40M24 36H40M24 44H32" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h4 class="alliance-name">Infrastructure & Hosting</h4>
+                        <p class="alliance-description">
+                            Partnerships with data center and managed hosting providers for high-availability infrastructure solutions.
+                        </p>
+                    </article>
+                    
+                    <!-- Alliance 6: Connectivity -->
+                    <article class="alliance-card">
+                        <div class="alliance-icon">
+                            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="3"/>
+                                <path d="M32 12V32L44 38" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="32" cy="32" r="3" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h4 class="alliance-name">Connectivity & Messaging</h4>
+                        <p class="alliance-description">
+                            Collaborations with SWIFT, FIX protocol providers, and connectivity specialists for seamless market integration.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partnership CTA Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Become a Partner</h2>
+                    <p class="section-subtitle">
+                        Interested in partnering with ZBull-X Technologies? We're always exploring strategic relationships 
+                        that can deliver enhanced value to our clients.
+                    </p>
+                    <div class="mt-md">
+                        <a href="contact.html" class="btn btn-primary btn-large">Contact Our Partnership Team</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <h3>ZBull-X Technologies</h3>
+                    <p class="footer-tagline">Accelerating Capital Markets Technology</p>
+                    <p>Specialized consulting for Calypso, Murex, and Lumina Americas implementations.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <nav class="footer-links" aria-label="Footer Navigation">
+                        <a href="index.html">Home</a>
+                        <a href="solutions.html">Solutions</a>
+                        <a href="team.html">Team</a>
+                        <a href="insights.html">Insights</a>
+                        <a href="partnerships.html">Partnerships</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-section footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:info@zbullx.com">info@zbullx.com</a></p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                    
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/zbullx-technologies" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg class="social-icon" viewBox="0 0 64 64" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M52 8H12C9.79 8 8 9.79 8 12V52C8 54.21 9.79 56 12 56H52C54.21 56 56 54.21 56 52V12C56 9.79 54.21 8 52 8ZM22 48H16V26H22V48ZM19 23C17.34 23 16 21.66 16 20C16 18.34 17.34 17 19 17C20.66 17 22 18.34 22 20C22 21.66 20.66 23 19 23ZM48 48H42V37C42 34.79 40.21 33 38 33C35.79 33 34 34.79 34 37V48H28V26H34V28.5C35.13 27.13 37.24 26 39 26C43.42 26 48 28.58 48 35V48Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 ZBull-X Technologies. All rights reserved.</p>
+                    <div class="footer-legal">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
+

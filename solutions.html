@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ZBull-X Technologies Solutions - Murex MX.3, Calypso, and Lumina Americas expertise. Comprehensive capital markets technology implementation services.">
+    <meta name="keywords" content="Murex MX.3, Calypso platform, Lumina Americas, FRTB, collateral management, XVA, capital markets implementation">
+    
+    <title>Solutions - ZBull-X Technologies</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    
+    <style>
+        /* Solutions Page Specific Styles */
+        .platform-section {
+            scroll-margin-top: 100px;
+            padding: var(--spacing-lg) 0;
+        }
+        
+        .platform-header {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-blue) 100%);
+            color: var(--white);
+            padding: var(--spacing-md);
+            border-radius: 0.5rem;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .platform-header h2 {
+            color: var(--white);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .platform-tagline {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--neutral-light);
+            margin-bottom: 0;
+        }
+        
+        .platform-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-md);
+        }
+        
+        .platform-description {
+            background-color: var(--white);
+            padding: var(--spacing-md);
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .capabilities-list {
+            background-color: var(--white);
+            padding: var(--spacing-md);
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .capabilities-list h3 {
+            margin-bottom: var(--spacing-sm);
+            color: var(--primary-navy);
+        }
+        
+        .capabilities-list ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-sm);
+        }
+        
+        .capabilities-list li {
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-gray);
+        }
+        
+        .capabilities-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+        
+        .approach-section {
+            background-color: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .approach-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .approach-step {
+            position: relative;
+            padding: var(--spacing-md);
+            border: 2px solid var(--neutral-light);
+            border-radius: 0.5rem;
+            transition: var(--transition-base);
+        }
+        
+        .approach-step:hover {
+            border-color: var(--primary-blue);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: var(--spacing-md);
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-blue) 100%);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+        
+        .approach-step h3 {
+            margin-top: var(--spacing-sm);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .approach-step ul {
+            list-style: none;
+        }
+        
+        .approach-step li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+            color: var(--text-gray);
+        }
+        
+        .approach-step li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+        
+        .page-hero {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-blue) 100%);
+            color: var(--white);
+            padding: var(--spacing-lg) 0;
+            text-align: center;
+        }
+        
+        .page-hero h1 {
+            color: var(--white);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .page-hero p {
+            font-size: 1.25rem;
+            color: var(--neutral-light);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 767px) {
+            .capabilities-list ul {
+                grid-template-columns: 1fr;
+            }
+            
+            .approach-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header" id="header">
+        <div class="header-content">
+            <a href="index.html" class="logo" aria-label="ZBull-X Technologies Home">
+                <span>ZBull-X Technologies</span>
+            </a>
+            
+            <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="solutions.html" class="active">Solutions</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="partnerships.html">Partnerships</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="container">
+                <h1>Our Solutions</h1>
+                <p>
+                    Expert implementation and integration services for the world's leading capital markets platforms
+                </p>
+            </div>
+        </section>
+
+        <!-- Murex MX.3 Section -->
+        <section id="murex" class="platform-section">
+            <div class="container">
+                <div class="platform-header">
+                    <h2>Murex MX.3 Capabilities</h2>
+                    <p class="platform-tagline">Consultants with 10+ years of dedicated MX.3 experience</p>
+                </div>
+                
+                <div class="platform-content">
+                    <div class="platform-description">
+                        <p>
+                            ZBull-X Technologies delivers comprehensive Murex MX.3 implementation services with a focus on complex module deployment and enterprise-scale integration. Our consultants bring deep expertise in the most demanding areas of the platform, including regulatory compliance, risk management, and advanced calculations.
+                        </p>
+                        <p>
+                            We specialize in accelerating time-to-value for mission-critical implementations, leveraging proven methodologies and best practices developed through years of hands-on experience with global financial institutions.
+                        </p>
+                    </div>
+                    
+                    <div class="capabilities-list">
+                        <h3>Core Capabilities</h3>
+                        <ul>
+                            <li>FRTB Implementation & Optimization</li>
+                            <li>Collateral Management Solutions</li>
+                            <li>XVA Calculations (CVA, DVA, FVA, KVA)</li>
+                            <li>Market Risk Management</li>
+                            <li>Credit Risk & Counterparty Risk</li>
+                            <li>Regulatory Reporting (EMIR, MiFID II, Dodd-Frank)</li>
+                            <li>Trade Lifecycle Management</li>
+                            <li>Pricing & Valuation Models</li>
+                            <li>MX.3 Upgrade & Migration Services</li>
+                            <li>Performance Tuning & Optimization</li>
+                            <li>Data Architecture & Datamart Design</li>
+                            <li>Custom Module Development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calypso Section -->
+        <section id="calypso" class="platform-section section-alt">
+            <div class="container">
+                <div class="platform-header">
+                    <h2>Calypso Platform Services</h2>
+                    <p class="platform-tagline">Leveraging proprietary accelerators to reduce Calypso implementation time by up to 20%</p>
+                </div>
+                
+                <div class="platform-content">
+                    <div class="platform-description">
+                        <p>
+                            Our Calypso practice combines deep platform knowledge with rapid-deployment frameworks designed to accelerate front-to-back implementations for treasury and derivatives operations. We've developed proprietary accelerators and pre-configured templates that significantly reduce implementation timelines while maintaining the flexibility needed for complex requirements.
+                        </p>
+                        <p>
+                            From greenfield deployments to system modernization, our team delivers comprehensive Calypso solutions with a focus on operational efficiency and regulatory compliance.
+                        </p>
+                    </div>
+                    
+                    <div class="capabilities-list">
+                        <h3>Core Services</h3>
+                        <ul>
+                            <li>Front-to-Back Treasury Implementation</li>
+                            <li>Derivatives Processing & Lifecycle Management</li>
+                            <li>Collateral & Margin Management</li>
+                            <li>Risk Analytics & Reporting</li>
+                            <li>Regulatory Compliance Solutions</li>
+                            <li>Trade Booking & Confirmation</li>
+                            <li>Settlement & Payment Processing</li>
+                            <li>Market Data Integration</li>
+                            <li>System Integration & APIs</li>
+                            <li>Calypso Version Upgrades</li>
+                            <li>Workflow Automation</li>
+                            <li>24/7 Production Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lumina Americas Section -->
+        <section id="lumina" class="platform-section">
+            <div class="container">
+                <div class="platform-header">
+                    <h2>Lumina Americas & Regional Systems</h2>
+                    <p class="platform-tagline">Bridging global technology standards with Latin American market requirements</p>
+                </div>
+                
+                <div class="platform-content">
+                    <div class="platform-description">
+                        <p>
+                            ZBull-X Technologies provides specialized expertise in Lumina Americas and regional capital markets systems, with a unique understanding of Latin American regulatory requirements and market practices. Our team bridges the gap between global technology platforms and local market needs, ensuring seamless integration and compliance.
+                        </p>
+                        <p>
+                            We deliver comprehensive solutions for institutions operating in Latin American markets, combining technical platform expertise with deep knowledge of regional regulatory frameworks and operational requirements.
+                        </p>
+                    </div>
+                    
+                    <div class="capabilities-list">
+                        <h3>Regional Capabilities</h3>
+                        <ul>
+                            <li>Lumina Americas Implementation</li>
+                            <li>Local Market Integration (Brazil, Mexico, Chile, Colombia)</li>
+                            <li>Regulatory Compliance (CVM, CNBV, CMF, SFC)</li>
+                            <li>Cross-Border Transaction Processing</li>
+                            <li>Regional Exchange Connectivity</li>
+                            <li>Local Custody & Settlement Integration</li>
+                            <li>Tax Reporting & Calculations</li>
+                            <li>Multi-Currency Processing</li>
+                            <li>Regional Risk Management</li>
+                            <li>Customized Regulatory Reporting</li>
+                            <li>Spanish/Portuguese Language Support</li>
+                            <li>Time Zone Coverage & Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The ZBL Approach Section -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="approach-section">
+                    <div class="section-header">
+                        <h2 class="section-title">The ZBL Approach</h2>
+                        <p class="section-subtitle">
+                            A proven methodology that delivers results from discovery through optimization
+                        </p>
+                    </div>
+                    
+                    <div class="approach-steps">
+                        <!-- Step 1 -->
+                        <article class="approach-step">
+                            <span class="step-number">1</span>
+                            <h3>Discovery & Strategy</h3>
+                            <p>We begin every engagement with a comprehensive analysis of your business requirements, technology landscape, and strategic objectives.</p>
+                            <ul>
+                                <li>Business Process Analysis</li>
+                                <li>Current State Assessment</li>
+                                <li>Target Operating Model Design</li>
+                                <li>Vendor/Solution Architecture</li>
+                                <li>Project Roadmap Development</li>
+                                <li>Risk Assessment & Mitigation Planning</li>
+                            </ul>
+                        </article>
+                        
+                        <!-- Step 2 -->
+                        <article class="approach-step">
+                            <span class="step-number">2</span>
+                            <h3>Implementation & Integration</h3>
+                            <p>Our agile delivery model accelerates implementation while maintaining the flexibility to adapt to evolving requirements.</p>
+                            <ul>
+                                <li>System Configuration & Setup</li>
+                                <li>Data Migration & Validation</li>
+                                <li>Interface Development (APIs, FIX, SWIFT)</li>
+                                <li>Custom Module Development</li>
+                                <li>User Acceptance Testing</li>
+                                <li>Training & Knowledge Transfer</li>
+                            </ul>
+                        </article>
+                        
+                        <!-- Step 3 -->
+                        <article class="approach-step">
+                            <span class="step-number">3</span>
+                            <h3>Go-Live & Optimization</h3>
+                            <p>Post-launch, we provide comprehensive support to ensure stability, performance, and continuous improvement.</p>
+                            <ul>
+                                <li>Go-Live Support & Hypercare</li>
+                                <li>Performance Monitoring & Tuning</li>
+                                <li>Issue Resolution & Troubleshooting</li>
+                                <li>Managed Services (24/7 Support)</li>
+                                <li>Continuous Optimization</li>
+                                <li>Enhancement & Evolution</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Ready to Discuss Your Project?</h2>
+                    <p class="section-subtitle">
+                        Let's explore how our platform expertise can accelerate your implementation timeline.
+                    </p>
+                    <div class="mt-md">
+                        <a href="contact.html" class="btn btn-primary btn-large">Contact Our Team</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <h3>ZBull-X Technologies</h3>
+                    <p class="footer-tagline">Accelerating Capital Markets Technology</p>
+                    <p>Specialized consulting for Calypso, Murex, and Lumina Americas implementations.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <nav class="footer-links" aria-label="Footer Navigation">
+                        <a href="index.html">Home</a>
+                        <a href="solutions.html">Solutions</a>
+                        <a href="team.html">Team</a>
+                        <a href="insights.html">Insights</a>
+                        <a href="partnerships.html">Partnerships</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-section footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:info@zbullx.com">info@zbullx.com</a></p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                    
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/zbullx-technologies" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg class="social-icon" viewBox="0 0 64 64" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M52 8H12C9.79 8 8 9.79 8 12V52C8 54.21 9.79 56 12 56H52C54.21 56 56 54.21 56 52V12C56 9.79 54.21 8 52 8ZM22 48H16V26H22V48ZM19 23C17.34 23 16 21.66 16 20C16 18.34 17.34 17 19 17C20.66 17 22 18.34 22 20C22 21.66 20.66 23 19 23ZM48 48H42V37C42 34.79 40.21 33 38 33C35.79 33 34 34.79 34 37V48H28V26H34V28.5C35.13 27.13 37.24 26 39 26C43.42 26 48 28.58 48 35V48Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 ZBull-X Technologies. All rights reserved.</p>
+                    <div class="footer-legal">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
+

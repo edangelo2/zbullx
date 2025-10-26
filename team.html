@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the ZBull-X Technologies team. Expert consultants with decades of combined experience in Calypso, Murex, and capital markets technology.">
+    <meta name="keywords" content="capital markets consultants, Murex experts, Calypso consultants, technology leadership">
+    
+    <title>Our Team - ZBull-X Technologies</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    
+    <style>
+        /* Team Page Specific Styles */
+        .page-hero {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-blue) 100%);
+            color: var(--white);
+            padding: var(--spacing-lg) 0;
+            text-align: center;
+        }
+        
+        .page-hero h1 {
+            color: var(--white);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .page-hero p {
+            font-size: 1.25rem;
+            color: var(--neutral-light);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .company-intro {
+            background-color: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .company-intro h2 {
+            text-align: center;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .intro-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .intro-content p {
+            font-size: 1.0625rem;
+            line-height: 1.9;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .intro-content p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .team-member {
+            background-color: var(--white);
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-base);
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .member-photo {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, var(--neutral-gray) 0%, var(--neutral-dark) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .member-photo svg {
+            width: 120px;
+            height: 120px;
+            fill: var(--neutral-light);
+            opacity: 0.5;
+        }
+        
+        .member-info {
+            padding: var(--spacing-md);
+        }
+        
+        .member-name {
+            color: var(--primary-navy);
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .member-title {
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 1.125rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .member-bio {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .member-social {
+            margin-top: var(--spacing-sm);
+        }
+        
+        .member-social a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-blue);
+            transition: var(--transition-base);
+        }
+        
+        .member-social a:hover {
+            color: var(--primary-navy);
+        }
+        
+        .member-social svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+        
+        .careers-callout {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-blue) 100%);
+            color: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: 0.5rem;
+            text-align: center;
+            margin-top: var(--spacing-lg);
+        }
+        
+        .careers-callout h2 {
+            color: var(--white);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .careers-callout p {
+            font-size: 1.125rem;
+            color: var(--neutral-light);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        @media (max-width: 767px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header" id="header">
+        <div class="header-content">
+            <a href="index.html" class="logo" aria-label="ZBull-X Technologies Home">
+                <span>ZBull-X Technologies</span>
+            </a>
+            
+            <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="team.html" class="active">Team</a></li>
+                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="partnerships.html">Partnerships</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="container">
+                <h1>Our Team</h1>
+                <p>
+                    Expert consultants with deep domain knowledge and proven delivery excellence
+                </p>
+            </div>
+        </section>
+
+        <!-- Company Introduction -->
+        <section class="section">
+            <div class="container">
+                <div class="company-intro">
+                    <h2>About ZBull-X Technologies</h2>
+                    <div class="intro-content">
+                        <p>
+                            ZBull-X Technologies is a specialized consulting firm serving clients in the capital markets industry, bridging the gap between business and technology with a focus on precision and agility. The financial services landscape has undergone unprecedented transformation in recent years, driven by regulatory complexity, technological innovation, and market evolution. Through deep engagement with our clients during this period of change, it has become clear that they require not just individual consultants, but comprehensive consultancy—strategic partners who understand both the technical intricacies and business imperatives of capital markets technology.
+                        </p>
+                        <p>
+                            This approach has become the foundation of our client relationships. Each organization faces unique challenges in terms of implementation scope, regulatory timelines, and operational constraints. We understand that bespoke, flexible, and cost-effective solutions are essential for success in today's demanding environment.
+                        </p>
+                        <p>
+                            It is uncommon for a consulting firm to possess deep expertise in both capital markets operations and the technical platforms that power them. It is even rarer to deliver this expertise through structured, efficient methodologies without compromising quality or agility. At ZBull-X Technologies, we excel in this intersection, and our clients recognize the value of working with consultants who truly understand their world.
+                        </p>
+                        <p>
+                            The platforms where we demonstrate exceptional capability include Murex MX.3, Calypso, and Lumina Americas, with particular strength in complex implementations such as collateral management, regulatory reporting (FRTB, UMR), XVA calculations, and front-to-back integration for treasury and derivatives operations. Our core areas of expertise encompass risk management, regulatory compliance, and enterprise-scale system integration.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Team -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Leadership Team</h2>
+                    <p class="section-subtitle">
+                        Seasoned professionals with decades of combined experience in capital markets technology
+                    </p>
+                </div>
+                
+                <div class="team-grid">
+                    <!-- Team Member 1 -->
+                    <article class="team-member">
+                        <div class="member-photo">
+                            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="32" cy="24" r="12" fill="currentColor"/>
+                                <path d="M8 56C8 44 18 36 32 36C46 36 56 44 56 56" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">John Smith</h3>
+                            <p class="member-title">Managing Director & Founder</p>
+                            <p class="member-bio">
+                                John brings over 15 years of capital markets technology experience, with extensive expertise in Murex MX.3 implementations across global tier-1 investment banks. Previously served as VP of Technology at a leading investment bank, where he led the successful deployment of Murex FRTB and collateral management solutions. Specialized in complex regulatory implementations and enterprise architecture.
+                            </p>
+                            <div class="member-social">
+                                <a href="#" target="_blank" rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19 3H5C3.89 3 3 3.89 3 5V19C3 20.11 3.89 21 5 21H19C20.11 21 21 20.11 21 19V5C21 3.89 20.11 3 19 3ZM9 17H6.5V10H9V17ZM7.75 8.75C6.92 8.75 6.25 8.08 6.25 7.25C6.25 6.42 6.92 5.75 7.75 5.75C8.58 5.75 9.25 6.42 9.25 7.25C9.25 8.08 8.58 8.75 7.75 8.75ZM17 17H14.5V13.5C14.5 12.4 13.6 11.5 12.5 11.5C11.4 11.5 10.5 12.4 10.5 13.5V17H8V10H10.5V11.25C11.16 10.46 12.21 10 13.25 10C15.32 10 17 11.68 17 13.75V17Z"/>
+                                    </svg>
+                                    LinkedIn Profile
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Team Member 2 -->
+                    <article class="team-member">
+                        <div class="member-photo">
+                            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="32" cy="24" r="12" fill="currentColor"/>
+                                <path d="M8 56C8 44 18 36 32 36C46 36 56 44 56 56" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Maria Rodriguez</h3>
+                            <p class="member-title">Director, Calypso Practice</p>
+                            <p class="member-bio">
+                                Maria has 12+ years of hands-on Calypso implementation experience across treasury and derivatives operations. Previously at Calypso Technology as a senior consultant, she led multiple front-to-back implementations for global banks. Expert in rapid-deployment methodologies and has developed proprietary accelerators that reduce implementation time significantly. Specialized in collateral management and regulatory reporting.
+                            </p>
+                            <div class="member-social">
+                                <a href="#" target="_blank" rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19 3H5C3.89 3 3 3.89 3 5V19C3 20.11 3.89 21 5 21H19C20.11 21 21 20.11 21 19V5C21 3.89 20.11 3 19 3ZM9 17H6.5V10H9V17ZM7.75 8.75C6.92 8.75 6.25 8.08 6.25 7.25C6.25 6.42 6.92 5.75 7.75 5.75C8.58 5.75 9.25 6.42 9.25 7.25C9.25 8.08 8.58 8.75 7.75 8.75ZM17 17H14.5V13.5C14.5 12.4 13.6 11.5 12.5 11.5C11.4 11.5 10.5 12.4 10.5 13.5V17H8V10H10.5V11.25C11.16 10.46 12.21 10 13.25 10C15.32 10 17 11.68 17 13.75V17Z"/>
+                                    </svg>
+                                    LinkedIn Profile
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Team Member 3 -->
+                    <article class="team-member">
+                        <div class="member-photo">
+                            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="32" cy="24" r="12" fill="currentColor"/>
+                                <path d="M8 56C8 44 18 36 32 36C46 36 56 44 56 56" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Carlos Mendez</h3>
+                            <p class="member-title">Director, Regional Systems & Lumina Practice</p>
+                            <p class="member-bio">
+                                Carlos brings 14 years of experience in Latin American capital markets technology, with deep expertise in Lumina Americas and regional system integration. Previously held senior positions at major Brazilian and Mexican financial institutions, leading technology transformation programs. Specialized in cross-border implementations, regulatory compliance (CVM, CNBV), and bridging global platforms with local market requirements.
+                            </p>
+                            <div class="member-social">
+                                <a href="#" target="_blank" rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19 3H5C3.89 3 3 3.89 3 5V19C3 20.11 3.89 21 5 21H19C20.11 21 21 20.11 21 19V5C21 3.89 20.11 3 19 3ZM9 17H6.5V10H9V17ZM7.75 8.75C6.92 8.75 6.25 8.08 6.25 7.25C6.25 6.42 6.92 5.75 7.75 5.75C8.58 5.75 9.25 6.42 9.25 7.25C9.25 8.08 8.58 8.75 7.75 8.75ZM17 17H14.5V13.5C14.5 12.4 13.6 11.5 12.5 11.5C11.4 11.5 10.5 12.4 10.5 13.5V17H8V10H10.5V11.25C11.16 10.46 12.21 10 13.25 10C15.32 10 17 11.68 17 13.75V17Z"/>
+                                    </svg>
+                                    LinkedIn Profile
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Team Member 4 -->
+                    <article class="team-member">
+                        <div class="member-photo">
+                            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="32" cy="24" r="12" fill="currentColor"/>
+                                <path d="M8 56C8 44 18 36 32 36C46 36 56 44 56 56" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Sarah Chen</h3>
+                            <p class="member-title">Principal Consultant, Risk & Regulatory</p>
+                            <p class="member-bio">
+                                Sarah has 13 years of experience specializing in regulatory technology implementations, with deep expertise in FRTB, UMR, and XVA calculations across both Murex and Calypso platforms. Previously worked at a Big Four consulting firm leading regulatory compliance projects for global banks. Expert in translating complex regulatory requirements into technical solutions and has successfully delivered multiple FRTB implementations.
+                            </p>
+                            <div class="member-social">
+                                <a href="#" target="_blank" rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19 3H5C3.89 3 3 3.89 3 5V19C3 20.11 3.89 21 5 21H19C20.11 21 21 20.11 21 19V5C21 3.89 20.11 3 19 3ZM9 17H6.5V10H9V17ZM7.75 8.75C6.92 8.75 6.25 8.08 6.25 7.25C6.25 6.42 6.92 5.75 7.75 5.75C8.58 5.75 9.25 6.42 9.25 7.25C9.25 8.08 8.58 8.75 7.75 8.75ZM17 17H14.5V13.5C14.5 12.4 13.6 11.5 12.5 11.5C11.4 11.5 10.5 12.4 10.5 13.5V17H8V10H10.5V11.25C11.16 10.46 12.21 10 13.25 10C15.32 10 17 11.68 17 13.75V17Z"/>
+                                    </svg>
+                                    LinkedIn Profile
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Careers Callout -->
+        <section class="section">
+            <div class="container">
+                <div class="careers-callout">
+                    <h2>Join Our Team</h2>
+                    <p>
+                        We're always looking for talented professionals with deep capital markets technology expertise. 
+                        If you're passionate about delivering exceptional consulting services and driving innovation in financial technology, we'd love to hear from you.
+                    </p>
+                    <a href="contact.html" class="btn btn-primary btn-large">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <h3>ZBull-X Technologies</h3>
+                    <p class="footer-tagline">Accelerating Capital Markets Technology</p>
+                    <p>Specialized consulting for Calypso, Murex, and Lumina Americas implementations.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <nav class="footer-links" aria-label="Footer Navigation">
+                        <a href="index.html">Home</a>
+                        <a href="solutions.html">Solutions</a>
+                        <a href="team.html">Team</a>
+                        <a href="insights.html">Insights</a>
+                        <a href="partnerships.html">Partnerships</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-section footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:info@zbullx.com">info@zbullx.com</a></p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                    
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/zbullx-technologies" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg class="social-icon" viewBox="0 0 64 64" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M52 8H12C9.79 8 8 9.79 8 12V52C8 54.21 9.79 56 12 56H52C54.21 56 56 54.21 56 52V12C56 9.79 54.21 8 52 8ZM22 48H16V26H22V48ZM19 23C17.34 23 16 21.66 16 20C16 18.34 17.34 17 19 17C20.66 17 22 18.34 22 20C22 21.66 20.66 23 19 23ZM48 48H42V37C42 34.79 40.21 33 38 33C35.79 33 34 34.79 34 37V48H28V26H34V28.5C35.13 27.13 37.24 26 39 26C43.42 26 48 28.58 48 35V48Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 ZBull-X Technologies. All rights reserved.</p>
+                    <div class="footer-legal">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
+

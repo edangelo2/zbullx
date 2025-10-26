@@ -1,0 +1,141 @@
+---
+alwaysApply: true
+---
+# Static HTML Institutional Site - Cursor Rules
+
+## Tech Stack
+- Pure HTML5, CSS3, and vanilla JavaScript
+- No frameworks or build tools required
+- Responsive design with mobile-first approach
+- Semantic HTML for SEO and accessibility
+
+## Project Structure
+```
+/
+├── index.html
+├── about.html
+├── services.html
+├── contact.html
+├── css/
+│   ├── main.css
+│   ├── reset.css
+│   └── responsive.css
+├── js/
+│   ├── main.js
+│   └── contact-form.js
+├── images/
+│   ├── logo.svg
+│   ├── hero/
+│   └── gallery/
+├── fonts/
+└── assets/
+```
+
+## Code Style & Standards
+
+### HTML
+- Use semantic HTML5 elements (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`)
+- Include proper meta tags: viewport, description, keywords, Open Graph
+- Add descriptive alt text for all images
+- Use descriptive ID and class names (BEM methodology preferred)
+- Ensure all forms have proper labels and validation attributes
+- Include ARIA labels where needed for accessibility
+
+### CSS
+- Use CSS custom properties (variables) for colors, spacing, and typography
+- Mobile-first responsive design with min-width media queries
+- Avoid !important declarations
+- Use flexbox and CSS Grid for layouts
+- Keep specificity low, avoid deep nesting
+- Group related styles together
+- Comment major sections
+
+### JavaScript
+- Use modern ES6+ syntax
+- Keep code modular and reusable
+- Use event delegation for better performance
+- Avoid global variables, use IIFE or modules
+- Add loading states for async operations
+- Include error handling for all user interactions
+
+## Performance Guidelines
+- Optimize images (WebP format with fallbacks, max 200KB per image)
+- Lazy load images below the fold
+- Minify CSS and JS for production
+- Use system fonts or limit to 2 custom font families
+- Inline critical CSS for above-the-fold content
+- Defer non-critical JavaScript
+
+## Accessibility Requirements
+- WCAG 2.1 Level AA compliance minimum
+- Keyboard navigation support for all interactive elements
+- Focus indicators visible on all focusable elements
+- Color contrast ratio minimum 4.5:1 for text
+- Skip navigation links for screen readers
+- Proper heading hierarchy (h1-h6)
+
+## SEO Best Practices
+- Unique, descriptive title tags (50-60 characters)
+- Meta descriptions (150-160 characters)
+- Canonical URLs
+- Structured data (Schema.org JSON-LD)
+- XML sitemap
+- Robots.txt file
+- Semantic heading structure
+
+## Form Handling
+- Client-side validation with HTML5 attributes
+- Clear error messages
+- Submit button disabled during processing
+- Success/error feedback to users
+- Honeypot field for spam prevention
+- Use Formspree, FormSubmit, or similar for backend
+
+## Browser Support
+- Modern browsers (last 2 versions)
+- Graceful degradation for older browsers
+- Test on Chrome, Firefox, Safari, Edge
+
+## Naming Conventions
+- Files: lowercase with hyphens (about-us.html, main-styles.css)
+- Classes: BEM methodology (block__element--modifier)
+- IDs: camelCase for JavaScript hooks
+- Images: descriptive names (hero-background-office.jpg)
+
+## Comments & Documentation
+- Comment complex CSS selectors
+- Document JavaScript functions with JSDoc style
+- Add TODO comments for future improvements
+- Include setup instructions in README.md
+
+## Git Workflow (if using version control)
+- Meaningful commit messages
+- Feature branches for major changes
+- Keep commits atomic and focused
+- Use .gitignore for unnecessary files
+
+## Testing Checklist
+- Validate HTML (W3C Validator)
+- Validate CSS
+- Test all forms and interactions
+- Check responsive design on multiple devices
+- Test page load speed (Google PageSpeed Insights)
+- Check accessibility (WAVE, axe DevTools)
+- Cross-browser testing
+- Spell check all content
+
+## Common Components to Include
+- Responsive navigation with mobile menu
+- Hero section with CTA
+- Contact form with validation
+- Footer with contact info and social links
+- Cookie consent banner (if needed)
+- Loading states and animations
+- 404 error page
+
+## Security Considerations
+- Use HTTPS only
+- Sanitize any user input
+- Implement CSP headers via meta tags
+- No sensitive data in client-side code
+- Keep contact forms spam-protected
